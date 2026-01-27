@@ -1,4 +1,4 @@
-package com.irinayausei.aqa.tests;
+package com.irynayausei.aqa.tests;
 
 import org.junit.jupiter.api.Test;
 

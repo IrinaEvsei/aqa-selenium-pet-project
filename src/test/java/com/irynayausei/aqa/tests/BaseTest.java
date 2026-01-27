@@ -1,12 +1,15 @@
-package com.irinayausei.aqa.tests;
+package com.irynayausei.aqa.tests;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class BaseTest {
-    public WebDriver webDriver;
+    protected WebDriver webDriver;
 
     @BeforeEach
     public void driverSetUp(){
