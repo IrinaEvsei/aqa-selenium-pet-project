@@ -4,6 +4,8 @@ import com.irynayausei.aqa.base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.irynayausei.aqa.utils.Urls;
+
 public class LoginPage extends BasePage {
 
     private final By usernameInput = By.id("username");
@@ -11,15 +13,13 @@ public class LoginPage extends BasePage {
     private final By loginButton = By.cssSelector("button[type='submit']");
     private final By errorMessage = By.id("flash");
 
-    private static final String LOGIN_URL =
-            "https://the-internet.herokuapp.com/login";
 
     public LoginPage(WebDriver driver) {
         super(driver);
     }
 
     public void open() {
-        driver.get(LOGIN_URL);
+        driver.get(Urls.LOGIN_PAGE);
     }
 
     public SecurePage login(String username, String password) {
