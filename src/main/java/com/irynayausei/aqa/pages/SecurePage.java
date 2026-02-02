@@ -1,6 +1,7 @@
 package com.irynayausei.aqa.pages;
 
 import com.irynayausei.aqa.base.BasePage;
+import com.irynayausei.aqa.utils.Urls;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -15,6 +16,11 @@ public class SecurePage extends BasePage {
 
     public boolean isSuccessMessageDisplayed() {
         return waitForVisibility(successMessage).isDisplayed();
+    }
+
+    public boolean isOpened() {
+        return driver.getCurrentUrl().contains(Urls.SECURE_PAGE)
+                && waitForVisibility(successMessage).isDisplayed();
     }
 
     public LoginPage logout() {

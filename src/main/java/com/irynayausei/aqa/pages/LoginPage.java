@@ -22,6 +22,10 @@ public class LoginPage extends BasePage {
         driver.get(Urls.LOGIN_PAGE);
     }
 
+    public boolean isOpened() {
+        return driver.getCurrentUrl().contains(Urls.LOGIN_PAGE);
+    }
+
     public SecurePage login(String username, String password) {
         waitForVisibility(usernameInput).sendKeys(username);
         driver.findElement(passwordInput).sendKeys(password);
